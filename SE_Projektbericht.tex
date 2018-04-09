@@ -1,0 +1,89 @@
+\documentclass[DIV=13, 10pt,a4paper]{scrartcl} %% Remove demo in your file.
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[headsepline,footsepline,automark]{scrpage2}
+\usepackage{pdfpages}
+
+\usepackage{lipsum}% Used for dummy text.
+
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\definecolor{namecolor}{cmyk}{0,.24,.07,.47} 
+
+\makeatletter                       
+\def\printauthor{%                  
+	{\small \@author}}              
+\makeatother
+\author{%
+	Author 1 name \\
+	\texttt{email1@example.com}\vspace{10pt} \\
+	Author 2 name \\
+	\texttt{email2@example.com}\vspace{10pt} \\
+	Author 3 name \\
+	\texttt{email3@example.com}\vspace{10pt} \\
+	Author 4 name \\
+	\texttt{email4@example.com}
+}
+
+
+\pagestyle{scrheadings}
+\cfoot[]{}
+\ofoot[]{\pagemark}
+\setkomafont{pageheadfoot}{\normalfont\sffamily}
+
+%-----------------------------------------------------------------
+\begin{document}
+% ----------------------------------------------------------------
+\begin{titlepage}
+
+\newgeometry{left=3cm,right=4cm} %defines the geometry for the titlepage
+\pagecolor{titlepagecolor}
+\noindent
+\includegraphics[width=3cm]{logo.jpg}\\[1em]
+\color{white}
+{\LARGE \textbf{\textsf{PPP - Pen\&Paper Pal}}}\\
+\makebox[0pt][l]{\rule{1.3\textwidth}{1pt}}
+\par
+\noindent
+\textbf{\textsf{Ostbayrische Technische Hochschule}} \textcolor{namecolor}{\textsf{Regensburg}}
+\vfill
+\noindent
+\begin{minipage}[t]{0.35\linewidth}
+	\vspace{0pt}
+	\begin{flushright}
+		\printauthor
+	\end{flushright}
+\end{minipage}
+%\hspace{15pt}
+\hfill
+\begin{minipage}[t]{0.6\linewidth}
+	\vspace{40pt}
+	{\huge \textsf{Projektbericht}}
+	\vskip\baselineskip
+	\noindent
+	\textsf{\today}
+\end{minipage}
+\end{titlepage}
+\restoregeometry % restores the geometry
+\nopagecolor% Use this to restore the color pages to white
+% ----------------------------------------------------------------
+
+\tableofcontents
+\thispagestyle{empty}
+\pagebreak
+\setcounter{page}{1}
+
+\section{Projektvision}
+	\begin{center}
+		\includegraphics[page=1,width=0.75\textwidth]{docs/presentation.pdf}
+		\includegraphics[page=2,width=0.75\textwidth]{docs/presentation.pdf}
+		\includegraphics[page=3,width=0.75\textwidth]{docs/presentation.pdf}
+	\end{center}
+
+\section{Projektauftrag}
+
+\end{document}
