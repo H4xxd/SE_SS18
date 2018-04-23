@@ -17,6 +17,7 @@
 
 \usepackage{lipsum}% Used for dummy text.
 
+
 \definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
 \definecolor{namecolor}{cmyk}{0,.24,.07,.47} 
 
@@ -42,7 +43,7 @@
 \setkomafont{pageheadfoot}{\normalfont\sffamily}
 
 \newcommand{\colorcell}[1]{\cellcolor{namecolor}\color{white}\textbf{#1}}
-\newcommand{\colorcelllight}[1]{\cellcolor{namecolor!25}\color{black}\textbf{#1}}
+\newcommand{\colorcelllight}[1]{\cellcolor{namecolor!25}\color{black}{#1}}
 
 %-----------------------------------------------------------------
 \begin{document}
@@ -173,7 +174,7 @@
 	\cline{2-2}
 	\colorcelllight{} & 3. Testen.\\
 	\cline{2-2}
-	\colorcelllight{} & 4. Dezentralisierten Coin Miner implemntieren.\\
+	\colorcelllight{} & 4. Dezentralisierten Coin Miner implementieren.\\
 	\cline{2-2}
 	\multirow{-5}{*}{\colorcelllight{Projektphasen}} & 5. Get rich fast! \\
 	\hline
@@ -296,5 +297,62 @@
 			\item Post
 		\end{itemize}
 \end{multicols}
+
+\section{Systemkontext}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = \textwidth]{docs/03_03_Systemkontext.jpg}
+\end{figure}
+
+\section{Stakeholderanalyse}
+
+\section{Requirementsengineering}
+\begin{tabularx}{\textwidth}{|c|X|}
+	\hline
+	\multicolumn{2}{|l|}{\colorcell{{Functional Requirements}}}\\
+	\hline
+	\colorcelllight{REQ01} & Der Benutzer muss sich anmelden können.\\
+	\hline
+	\colorcelllight{REQ02} & Ein neuer Anwender ohne Account muss sich registrieren können.\\
+	\hline
+	\colorcelllight{REQ03} & Benutzer muss Orte, andere Nutzer und Spiele bewerten können.\\
+	\hline
+	\colorcelllight{REQ04} & Benutzer müssen sich zu Spielgruppen zusammenschließen können.\\
+	\hline
+	\colorcelllight{REQ05} & Benutzer müssen andere suchende Spieler (unter Angabe eines Ortes sowie eines Umkreises) finden können.\\
+	\hline
+	\colorcelllight{REQ06} & Benutzer sollen sich innerhalb der Gruppe unterhalten können.\\
+	\hline
+	\colorcelllight{REQ07} & Benutzer sollen untereinander kommunizieren können.\\
+	\hline
+	\colorcelllight{REQ08} & Benutzer soll per GPS suchende Spieler im Umkreis finden können.\\
+	\hline
+	\colorcelllight{REQ09} & Benutzer soll Suche filtern können.\\
+	\hline
+	\colorcelllight{REQ10} & Benutzer soll innerhalb der Gruppe einen gemeinsamen Termin finden können.\\
+	\hline
+	\colorcelllight{REQ11} & Benutzer sollen an einer Tauschbörse ihre Spiele tauschen können.\\
+	\hline
+	\colorcelllight{REQ12} & Benutzer sollen sich in einem Forum austauschen können.\\
+	\hline
+	\multicolumn{2}{|l|}{\colorcell{Non-Functional Requirements}}\\
+	\hline
+	\colorcelllight{REQ13} & Server muss immer erreichbar sein.\\
+	\hline
+	\colorcelllight{REQ14} & Server muss durchschnittlich innerhalb von 20ms antworten.\\
+	\hline
+	\colorcelllight{REQ15} & Miner muss immer minen.\\
+	\hline
+	\colorcelllight{REQ16} & Das Projekt soll nach Kanban geführt werden.\\
+	\hline
+	\multicolumn{2}{|l|}{\colorcell{Risiken}}\\
+	\hline
+	\colorcelllight{RSK01} & Größe des Projekts wurde überschätzt (Projekt \& Produkt).\\
+	\hline
+	\colorcelllight{RSK02} & Ein Konkurrenz-Produkt erreicht den Markt vor Systemfertigstellung.\\
+	\hline
+	\colorcelllight{RSK03} & Projekt erwirtschaftet zu wenig Geld.\\
+	\hline
+\end{tabularx}
 
 \end{document}
