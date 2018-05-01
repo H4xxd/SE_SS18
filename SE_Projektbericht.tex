@@ -10,10 +10,15 @@
 \usepackage[headsepline,footsepline,automark]{scrpage2}
 \usepackage{pdfpages}
 \usepackage{tabularx}
+\usepackage{tabulary}
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{color, colortbl}
+\usepackage{lscape}
+\usepackage[toc,page]{appendix} 
+
 
 \usepackage{lipsum}% Used for dummy text.
 
@@ -26,16 +31,24 @@
 	{\small \@author}}              
 \makeatother
 \author{%
-	Author 1 name \\
-	\texttt{email1@example.com}\vspace{10pt} \\
-	Author 2 name \\
-	\texttt{email2@example.com}\vspace{10pt} \\
-	Author 3 name \\
-	\texttt{email3@example.com}\vspace{10pt} \\
-	Author 4 name \\
-	\texttt{email4@example.com}
+	Patrick Gruber
+	\texttt{\mailto{patrick.gruber@st.oth-regensburg.de}}\vspace{10pt} \\
+	Markus Bauer 
+	\texttt{\mailto{ markus.bauer@st.oth-regensburg.de}}\vspace{10pt} \\
+	Marius Tuschl
+	\texttt{\mailto{ marius.tuschl@st.oth-regensburg.de}}\vspace{10pt} \\
+	Richard Tscharntke
+	\texttt{\mailto{richard.tscharntke@st.oth-regensburg.de}}
 }
 
+           
+\usepackage{hyperref}
+%\hypersetup{
+%		colorlinks = true,
+%		linkcolor = namecolor,
+%		draft = true
+%	}
+\usepackage[all]{hypcap}
 
 \pagestyle{scrheadings}
 \cfoot[]{}
@@ -44,6 +57,7 @@
 
 \newcommand{\colorcell}[1]{\cellcolor{namecolor}\color{white}\textbf{#1}}
 \newcommand{\colorcelllight}[1]{\cellcolor{namecolor!25}\color{black}{#1}}
+\newcommand{\mailto}[1]{\href{mailto:#1}{#1}}
 
 %-----------------------------------------------------------------
 \begin{document}
@@ -64,13 +78,13 @@
 \noindent
 \begin{minipage}[t]{0.35\linewidth}
 	\vspace{0pt}
-	\begin{flushright}
+	\begin{flushleft}
 		\printauthor
-	\end{flushright}
+	\end{flushleft}
 \end{minipage}
 %\hspace{15pt}
 \hfill
-\begin{minipage}[t]{0.6\linewidth}
+\begin{minipage}[t]{0.5\linewidth}
 	\vspace{40pt}
 	{\huge \textsf{Projektbericht}}
 	\vskip\baselineskip
@@ -301,17 +315,48 @@
 \section{Systemkontext}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width = \textwidth]{docs/03_03_Systemkontext.jpg}
-\end{figure}
+	\includegraphics[width = 0.9\textwidth]{docs/03_03_Systemkontext.jpg}
+	\caption{Systemkontext}
+ \end{figure}
 
+\begin{landscape}
+	\thispagestyle{empty}
+	\newgeometry{top = 12cm,textheight=20cm}
+	\small
 \section{Stakeholderanalyse}
+	\begin{tabularx}{1.2\paperwidth}{|>{\cellcolor{namecolor!25}}l|l|l|X|X|X|}
+		\hline
+		\multicolumn{6}{|l|}{\colorcell{Stakeholderübersicht}}\\
+		\hline
+		\rowcolor{namecolor!25}
+		Rolle&Vertreter&Verfügbarkeit&Beschreibung &Wissennsgebiete&Begründung\\
+		\hline
+		Projektleitung&\hyperref[person:MarkusBauer]{Markus Bauer}&1\%& Nennt Produkt-\&Projektziele&Kennt Produkte der Konkurrenz&Entscheided über Realisierung, Geldgeber\\
+		\hline
+		Frontend&\hyperref[person:MariusTuschl]{Marius Tuschl}&100\%&Planung der Architektur des Frontends& Kennntnis über Framework &Entscheidung über die Realisierung des Frontends\\
+		\hline
+		Backend&\hyperref[person:RichardTscharntke]{Richard Tscharntke}&100\%&Planung und Architektur des Backends&Kenntnis über Framework, Monetaresierung&Entscheided über die Realisierunng des Backends\\
+		\hline
+		Marketing&\hyperref[person:PatrickGruber]{Patrick Gruber}&35\%&Planung Marketinngkonzept, Korrespondenz mit Werbepartner&Kennntnisse über Produktmarkt&Entscheided über die Realisierung des Marketingkonzepts\\
+		\hline
+		Anwender&\hyperref[person:PiaEichinger]{Pia Eichinger}&2\%&Benutzer des Systems&Erfahrene Spielerin&Bewertung des Systems aus der Sicht des Endanwenders\\
+		\hline
+		Gamemaster&\hyperref[person:FlorianLoher]{Florian Loher}&23\%&Erweiterter Nutzer des Systems&Langjährige Spielerfahrunng&Bewertung des Systems aus sicht des erweiterten Endanwenders\\
+		\hline
+		Forenadmin&\hyperref[person:FlorianLink]{Florian Link}&&&&\\
+		\hline
+		Zahlungsdienst&\hyperref[person:MrPayPal]{Mr. PayPal}&95\%&Wickelt Zahlungstrannsfer ab&Technische Abweicklung des Zahlunngsprozesses&International anerkanntes online Zahlungssystem\\
+		\hline
+		Appstore&\hyperref[person:MrGoogle]{Mr. Google}&95\%&Vertrieb der Applikation&Technische Abwicklung des Appvertriebs&Wird zum Angebot von Android Apps benötigt\\
+		\hline
+\end{tabularx}
+\restoregeometry
+\end{landscape}
 
 \section{Umfang des Projekts}
 	\subsection*{Aktueller Zustand}
-	Es gibt viele Menschen, die von Pen\&Paper Spielen gehört haben und diese ausprobieren wollen. Das ist im Moment aber gar nicht so einfach. Man braucht eine Gruppe an Mitspielern, einen Spielführer und Regelwerke. Wenn man niemanden kennt, der bereits Erfahrungen mit Pen\&Paper Spielen hat, können diese Hürden unüberwindbar scheinen. 
-	Auch für erfahrene Spieler kann es schwierig sein, neue Gruppen bzw. Gruppen für andere Spiele zu finden. 
-	
-	
+	Es gibt viele Menschen, die von Pen\&Paper Spielen gehört haben und diese ausprobieren wollen. Das ist im Moment aber gar nicht so einfach. Man braucht eine Gruppe an Mitspielern, einen Spielführer und Regelwerke. Wenn man niemanden kennt, der bereits Erfahrungen mit Pen\&Paper Spielen hat, können diese Hürden unüberwindbar scheinen.\\
+	Auch für erfahrene Spieler kann es schwierig sein, neue Gruppen bzw. Gruppen für andere Spiele zu finden. 	
 
 \section{Requirementsengineering}
 \begin{tabularx}{\textwidth}{|c|X|}
@@ -324,7 +369,7 @@
 	\hline
 	\colorcelllight{REQ03} & Benutzer muss Orte, andere Nutzer und Spiele bewerten können.\\
 	\hline
-	\colorcelllight{REQ04} & Benutzer müssen sich zu Spielgruppen zusammenschließen können.\\
+	\colorcelllight{REQ04} & Benutzer können Spielgruppen erstellen.\\
 	\hline
 	\colorcelllight{REQ05} & Benutzer müssen andere suchende Spieler (unter Angabe eines Ortes sowie eines Umkreises) finden können.\\
 	\hline
@@ -342,15 +387,20 @@
 	\hline
 	\colorcelllight{REQ12} & Benutzer sollen sich in einem Forum austauschen können.\\
 	\hline
+	\colorcelllight{REQ13} & Benutzer muss eigenes Profil individualisieren könne.\\
+	\hline
+	\colorcelllight{REQ14} & Benutzer soll Gruppen beitreten können.\\
+	\hline
+	\colorcelllight{REQ15} & Benutzer soll Gruppen verlassen können.\\
 	\multicolumn{2}{|l|}{\colorcell{Non-Functional Requirements}}\\
 	\hline
-	\colorcelllight{REQ13} & Server muss immer erreichbar sein.\\
+	\colorcelllight{REQ16} & Server muss immer erreichbar sein.\\
 	\hline
-	\colorcelllight{REQ14} & Server muss durchschnittlich innerhalb von 20ms antworten.\\
+	\colorcelllight{REQ17} & Server muss durchschnittlich innerhalb von 20ms antworten.\\
 	\hline
-	\colorcelllight{REQ15} & Miner muss immer minen.\\
+	\colorcelllight{REQ18} & Miner muss immer minen.\\
 	\hline
-	\colorcelllight{REQ16} & Das Projekt soll nach Kanban geführt werden.\\
+	\colorcelllight{REQ19} & Das Projekt soll nach Kanban geführt werden.\\
 	\hline
 	\multicolumn{2}{|l|}{\colorcell{Risiken}}\\
 	\hline
@@ -361,5 +411,51 @@
 	\colorcelllight{RSK03} & Projekt erwirtschaftet zu wenig Geld.\\
 	\hline
 \end{tabularx}
+
+\section{Kano-Modell}
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|c|}
+	\colorcell{REQ} & \colorcell{Kategorie} & \colorcell{Zufriedenheit} & \colorcell{Erfüllungsgrad} & \colorcell{$\frac{\text{Aufwand}}{\text{Nutzen}}$} & \colorcell{Prioritär}\\
+	\hline
+	\colorcelllight{01} & Basis & -5 & & $\Uparrow$ & 1\\
+	\hline
+\end{tabularx}
+
+
+\begin{appendices}
+	\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+	\makeatletter
+	\addtocontents{toc}{%
+		\begingroup
+		\let\protect\l@chapter\protect\l@section
+		\let\protect\l@section\protect\l@subsection
+	}
+%	\makeatother
+
+	\section{Personen}
+	\begin{tabularx}{\textwidth}{|l|l|l|X|}
+		\hline
+		\colorcell{Rolle} & \colorcell{Name} & \colorcell{Telefon} & \colorcell{Email}\\
+		\colorcelllight{Projektleitung} & \label{person:MarkusBauer}Markus Bauer &10123 & \mailto{markus.bauer@st.oth-regensburg.de}\\
+		\hline
+		\colorcelllight{Frontend} & \label{person:MariusTuschl}Marius Tuschl &0114 &\mailto{marius.tuschl@st.oth-regensburg.de}\\
+		\hline
+		\colorcelllight{Backend} & \label{person:RichardTscharntke}Richard Tscharntke &1269& \mailto{richard.tscharntke@st.oth-regensburg.de}\\
+		\hline
+		\colorcelllight{Marketinng} & \label{person:PatrickGruber}Patrick Gruber&1337&\mailto{patrick.gruber@st.oth-regensburg.de}\\
+		\hline
+		\colorcelllight{Anwender} & \label{person:PiaEichinger}Pia Eichinger&0314&\mailto{pia.eichinger@st.oth-regensburg.de}\\
+		\hline
+		\colorcelllight{Gamemaster}&\label{person:FlorianLoher}Florian Loher&0154&\mailto{florian.loher@st.oth-regensburg.de}\\
+		\hline
+		\colorcelllight{Forenadmin}&\label{person:FlorianLink}Florian Link&3234&\mailto{florian.link@st.oth-regensburg.de}\\
+		\hline
+		\colorcelllight{Zahlungsdienst}&\label{person:MrPayPal}Mr.PayPal&9595&\mailto{info@paypal.de}\\
+		\hline
+		\colorcelllight{Appstore}&\label{person:MrGoogle}Mr.Google&8371&\mailto{info@google.de}\\
+		\hline
+	\end{tabularx}
+	
+	\addtocontents{toc}{\endgroup}
+\end{appendices}
 
 \end{document}
