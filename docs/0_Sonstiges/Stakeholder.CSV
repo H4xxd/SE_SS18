@@ -1,0 +1,24 @@
+;;;;;
+Name/Rolle;Beschreibung;Konkreter Vertreter;Wissensgebiete;Verfügbarkeit;Begründung
+;;;;;
+Managment: Projektleitung;Nennt Produkt- und Projektziele;Markus Bauer Tel. Tel. 10123 markus.bauer@st.oth-regensburg.de;Kennt Produkte der Konkurrenz;1‰;Entscheidung über Realisierung, Geldgeber
+Managment: Frontend;Planung der Architektur des Frontends;Marius Tuschl 0114 Marisus.Tuschl@st.oth-regensburg.de;Informatik, Framework Kenntnis;100%;Entscheidung über die Realisierung des Frontends
+Managment: Marketing;Planung des Marketingplanes. Korrespondenz mit Werbepartnern;Patrick Gruber                Tel. 1337 patrick.gruber@st.oth-regensburg.de;Kennt den Markt;100%;Entscheidung über die Realisierung des Marketingkonzeptes, Kommunikation mit möglichen Partnern
+Managment: Backend;Planung der Architektur des Backends;Richard Tscharntke Tel.1269 richard.tscharntke@st.oth-regensburg.de;Monetarisierung, Framework Kenntnis;100%;Entscheidung über die Realisierung des Backends
+Anwender: User;Benutzer des Systems;Pia Eichinger    0314 pia.eichinger@st.oth-regensburg.de;Erfahrene Kartenspielerin;2%;Systemanwender muss zukünftig Bewertungen abgeben
+Anwender: Gamemaster;Erweiterter Benutzer des Systems;Florian Loher 0154 florian.loher@st.oth-regensburg.de;Langjährige Spielerfahrung;23%;Systemanwender bietet zusätzliche Serviceleistungen an
+Forenadmin;Moderiert das Forum;Florian Link 3234 florian.link@st.oth-regensburg.de;langjährig als Forenadmin beschäftigt;10%;Kontrollinstanz für das Forum
+Zahlungsdienst;Wickelt Zahlungstransfer ab;Mr Paypal    Tel. 9595    info@paypal.de;technsiche Abwicklung des Zahlungsprozesses;100%;International weit verbreitetes Zahlungsmittel
+Appstores;Vertrieb der App;Mr google     Tel.8371  info@google.de;technische Abwicklung des Appvertriebs;100%;Wird zum Angebot von Andorid Apps benötigt
+ ;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;

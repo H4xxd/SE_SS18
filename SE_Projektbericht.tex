@@ -104,15 +104,15 @@
 \section{Projektvision}
 \thispagestyle{empty}
 	\begin{flushleft}
-		\includegraphics[page=1,width=0.75\textwidth]{docs/presentation.pdf}
+		\includegraphics[page=1,width=0.75\textwidth]{docs/0_Sonstiges/presentation.pdf}
 		\vfill
 	\end{flushleft}
 	\begin{center}
-		\includegraphics[page=2,width=0.75\textwidth]{docs/presentation.pdf}
+		\includegraphics[page=2,width=0.75\textwidth]{docs/0_Sonstiges/presentation.pdf}
 		\vfill
 	\end{center}
 	\begin{flushright}
-		\includegraphics[page=3,width=0.75\textwidth]{docs/presentation.pdf}
+		\includegraphics[page=3,width=0.75\textwidth]{docs/0_Sonstiges/presentation.pdf}
 	\end{flushright}
 	
 
@@ -315,7 +315,7 @@
 \section{Systemkontext}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width = 0.9\textwidth]{docs/03_03_Systemkontext.jpg}
+	\includegraphics[width = 0.9\textwidth]{docs/0_Sonstiges/03_03_Systemkontext.jpg}
 	\caption{Systemkontext}
  \end{figure}
 
@@ -389,18 +389,16 @@
 	\hline
 	\colorcelllight{REQ13} & Benutzer muss eigenes Profil individualisieren könne.\\
 	\hline
-	\colorcelllight{REQ14} & Benutzer soll Gruppen beitreten können.\\
-	\hline
-	\colorcelllight{REQ15} & Benutzer soll Gruppen verlassen können.\\
+	\colorcelllight{REQ14} & Benutzer soll Gruppen verlassen können.\\
 	\multicolumn{2}{|l|}{\colorcell{Non-Functional Requirements}}\\
 	\hline
-	\colorcelllight{REQ16} & Server muss immer erreichbar sein.\\
+	\colorcelllight{REQ15} & Server muss immer erreichbar sein.\\
 	\hline
-	\colorcelllight{REQ17} & Server muss durchschnittlich innerhalb von 20ms antworten.\\
+	\colorcelllight{REQ16} & Server muss durchschnittlich innerhalb von 20ms antworten.\\
 	\hline
-	\colorcelllight{REQ18} & Miner muss immer minen.\\
+	\colorcelllight{REQ17} & Miner muss immer minen.\\
 	\hline
-	\colorcelllight{REQ19} & Das Projekt soll nach Kanban geführt werden.\\
+	\colorcelllight{REQ18} & Das Projekt soll nach Kanban geführt werden.\\
 	\hline
 	\multicolumn{2}{|l|}{\colorcell{Risiken}}\\
 	\hline
@@ -413,14 +411,44 @@
 \end{tabularx}
 
 \section{Kano-Modell}
-\begin{tabularx}{\textwidth}{|X|c|c|c|c|c|}
-	\colorcell{REQ} & \colorcell{Kategorie} & \colorcell{Zufriedenheit} & \colorcell{Erfüllungsgrad} & \colorcell{$\frac{\text{Aufwand}}{\text{Nutzen}}$} & \colorcell{Prioritär}\\
+\begin{tabularx}{\textwidth}{|>{\colorcelllight{}}l|l|X|X|l|l|}
+	\colorcell{REQ}&\colorcell{Kategorie}&\colorcell{Zufriedenheit}&\colorcell{Erfüllungsgrad}&\colorcell{$\frac{\text{Aufwand}}{\text{Nutzen}}$}&\colorcell{Prioritär}\\
 	\hline
-	\colorcelllight{01} & Basis & -5 & & $\Uparrow$ & 1\\
+	\colorcelllight{01}&Basis&0&100\%&$\Uparrow$&1\\
+	\hline
+	02&Basis&0&100\%&$\Uparrow$&1\\
+	\hline
+	03&Basis&0&100\%&$\Uparrow$&1\\
+	\hline
+	04&Basis&0&100\%&$\Uparrow$&1\\
+	\hline
+	05&Basis&0&100\%&$\Uparrow$&1\\
+	\hline
+	06&Leistung&0&50\%&$\Rightarrow$&2\\
+	\hline
+	07&Leistung&0.3&60\%&$\Rightarrow$&2\\
+	\hline
+	08&Begeisterung&0.1&25\%&$\Rightarrow$&3\\
+	\hline
+	09&Leistung&0.8&80\%&$\Rightarrow$&2\\
+	\hline
+	10&Begeisterung&0.25&40\%&$\Uparrow$&2\\
+	\hline
+	11&Begeisterung&0.2&33\%&$\Rightarrow /\Downarrow$&3\\
+	\hline
+	12&Begeisterung&0.2&33\%&$\Downarrow$&3\\
+	\hline
+	13&Basis&0&100\%&$\Uparrow$&1\\
+	\hline
+	14&Basis&0&100\%&$\Uparrow$&1\\
 	\hline
 \end{tabularx}
 
 
+
+
+%=========APPENDIX==========
+\newpage
 \begin{appendices}
 	\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 	\makeatletter
