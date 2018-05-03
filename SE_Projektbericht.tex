@@ -1,4 +1,4 @@
-\documentclass[DIV=13, 10pt,a4paper]{scrartcl} %% Remove demo in your file.
+\documentclass[DIV=13, 10pt,a4paper]{scrartcl}
 
 
 \usepackage[utf8]{inputenc}
@@ -314,7 +314,7 @@
 
 \begin{landscape}
 	\thispagestyle{empty}
-	\newgeometry{top = 12cm,textheight=20cm}
+	\newgeometry{top = 12cm,textheight=20cm,bottom = 2cm}
 	\small
 \section{Stakeholderanalyse}
 	\begin{tabularx}{1.2\paperwidth}{|>{\cellcolor{namecolor!25}}l|l|l|X|X|X|}
@@ -322,7 +322,8 @@
 		\multicolumn{6}{|l|}{\colorcell{Stakeholderübersicht}}\\
 		\hline
 		\rowcolor{namecolor!25}
-		Rolle&Vertreter&Verfügbarkeit&Beschreibung &Wissennsgebiete&Begründung\\
+		Rolle&Vertreter
+		\footnote{Eine detailierte Aufführung der einzelnen Personen ist in \hyperref[app:A_Personen]{Appendix A} gegeben}&Verfügbarkeit&Beschreibung &Wissennsgebiete&Begründung\\
 		\hline
 		Projektleitung&\hyperref[person:MarkusBauer]{Markus Bauer}&1\%& Nennt Produkt-\&Projektziele&Kennt Produkte der Konkurrenz&Entscheided über Realisierung, Geldgeber\\
 		\hline
@@ -451,38 +452,42 @@
 
 \newpage
 \section{UseCase Beschreibungen}
-\subsection{Blahh}
-\label{tab:UCB}
-\begin{tabularx}{\textwidth}{|>{\colorcelllight{}}l|X|X|X|X|}
-	\hline
-	\multicolumn{5}{|l|}{\colorcell{UseCase Beschreibung}}\\
-	\hline
-	Name&\multicolumn{4}{l|}{Marius Kann Latex richtig!!}\\
-	\hline
-	Kurzbeschreibung&\multicolumn{4}{l|}{}\\
-	\hline
-	Akteure&\multicolumn{4}{l|}{}\\
-	\hline
-	Auslöser&\multicolumn{4}{l|}{}\\
-	\hline
-	Eingehende Daten&\multicolumn{4}{l|}{}\\
-	\hline
-	Vorbedingungen&\multicolumn{4}{l|}{}\\
-	\hline
-	Nachbedingungen&\multicolumn{4}{l|}{}\\
-	\hline
-	Essentielle Schritte&\multicolumn{4}{l|}{}\\
-	\hline
-	Alternativszenarien&\multicolumn{4}{l|}{}\\
-	\hline
-	Offene Punkte&\multicolumn{4}{l|}{}\\
-	\hline
-	Änderungshistorie&Wann&Wer&Neuer Status&Was\\
-	&Bald&Nicht Ich&Fertig&DeineMutter!\\
-	\hline
-	Sonstiges&\multicolumn{4}{l|}{}\\
-	\hline
-\end{tabularx}
+\input{docs/2_UseCaseBeschreibungen/UCB_Patrick.tex}
+\input{docs/2_UseCaseBeschreibungen/UCB_Markus.tex}
+\input{docs/2_UseCaseBeschreibungen/UCB_Marius.tex}
+\input{docs/2_UseCaseBeschreibungen/UCB_Richard.tex}
+%\subsection*{Blahh}
+%\label{tab:UCB}
+%\begin{tabularx}{\textwidth}{|>{\colorcelllight{}}l|X|X|X|X|}
+%	\hline
+%	\multicolumn{5}{|l|}{\colorcell{UseCase Beschreibung}}\\
+%	\hline
+%	Name&\multicolumn{4}{l|}{Marius Kann Latex richtig!!}\\
+%	\hline
+%	Kurzbeschreibung&\multicolumn{4}{l|}{}\\
+%	\hline
+%	Akteure&\multicolumn{4}{l|}{}\\
+%	\hline
+%	Auslöser&\multicolumn{4}{l|}{}\\
+%	\hline
+%	Eingehende Daten&\multicolumn{4}{l|}{}\\
+%	\hline
+%	Vorbedingungen&\multicolumn{4}{l|}{}\\
+%	\hline
+%	Nachbedingungen&\multicolumn{4}{l|}{}\\
+%	\hline
+%	Essentielle Schritte&\multicolumn{4}{l|}{}\\
+%	\hline
+%	Alternativszenarien&\multicolumn{4}{l|}{}\\
+%	\hline
+%	Offene Punkte&\multicolumn{4}{l|}{}\\
+%	\hline
+%	Änderungshistorie&Wann&Wer&Neuer Status&Was\\
+%	&Bald&Nicht Ich&Fertig&DeineMutter!\\
+%	\hline
+%	Sonstiges&\multicolumn{4}{l|}{}\\
+%	\hline
+%\end{tabularx}
 
 
 %=========APPENDIX==========
@@ -498,6 +503,7 @@
 %	\makeatother
 
 	\section{Personen}
+	\label{app:A_Personen}
 	\begin{tabularx}{\textwidth}{|l|l|l|X|}
 		\hline
 		\colorcell{Rolle} & \colorcell{Name} & \colorcell{Telefon} & \colorcell{Email}\\
