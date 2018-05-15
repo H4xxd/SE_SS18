@@ -1,69 +1,91 @@
-\subsection*{Blahh}
-\label{tab:UCB}
+\subsection*{Spieler Suchen}
+\label{tab:UCB_SpielerSuchen}
 \begin{tabularx}{\textwidth}{|>{\colorcelllight{}}l|X|X|X|X|}
 	\hline
 	\multicolumn{5}{|l|}{\colorcell{UseCase Beschreibung}}\\
 	\hline
-	Name&\multicolumn{4}{l|}{Marius Kann Latex richtig!!}\\
+	Name&\multicolumn{4}{p{\ylength}|}{Spieler suchen}\\
 	\hline
-	Kurzbeschreibung&\multicolumn{4}{l|}{}\\
+	Kurzbeschreibung&\multicolumn{4}{p{\ylength}|}{Benutzer die Spielersuche zu ermöglichen}\\
 	\hline
-	Akteure&\multicolumn{4}{l|}{}\\
+	Akteure&\multicolumn{4}{p{\ylength}|}{Benutzer, Spielleiter}\\
 	\hline
-	Auslöser&\multicolumn{4}{l|}{}\\
+	Auslöser&\multicolumn{4}{p{\ylength}|}{Benutzer/Spielleiter fehlen noch Mitspieler }\\
 	\hline
-	Eingehende Daten&\multicolumn{4}{l|}{}\\
+	Eingehende Daten&\multicolumn{4}{p{\ylength}|}{Umkreis, Spiel, (Termin optional)}\\
 	\hline
-	Vorbedingungen&\multicolumn{4}{l|}{}\\
+	Vorbedingungen&\multicolumn{4}{p{\ylength}|}{keine}\\
 	\hline
-	Nachbedingungen&\multicolumn{4}{l|}{}\\
+	Nachbedingungen&\multicolumn{4}{p{\ylength}|}{Benutzer/Spielleiter bekommt Spieler anhand der eingegangenen Daten angezeigt. }\\
 	\hline
-	Essentielle Schritte&\multicolumn{4}{l|}{}\\
+	Essentielle Schritte&\multicolumn{4}{p{\ylength}|}{1. Benutzer Authentifizieren
+	\newline
+	2. Daten für Filterung eingeben
+	\newline
+	3. Benutzer aus Datenbank auswählen/anschreiben}\\
 	\hline
-	Alternativszenarien&\multicolumn{4}{l|}{}\\
+	Alternativszenarien&\multicolumn{4}{p{\ylength}|}{Keine Spieler mit aktuellen Filtereingaben auffindbar:
+	\newline
+	1. Fehlermeldung anzeigen
+	\newline
+	Authentifizierung Fehlgeschalgen:
+	\newline
+	1. Fehlermeldung anzeigen}\\
 	\hline
-	Offene Punkte&\multicolumn{4}{l|}{}\\
+	Offene Punkte&\multicolumn{4}{p{\ylength}|}{erweiterte Filtereinstellungen}\\
 	\hline
 	Änderungshistorie&Wann&Wer&Neuer Status&Was\\
-	&Bald&Nicht Ich&Fertig&DeineMutter!\\
+	&9.5.18&Markus Bauer &fertig&Erstellung\\
 	\hline
-	Sonstiges&\multicolumn{4}{l|}{}\\
+	Sonstiges&\multicolumn{4}{p{\ylength}|}{}\\
 	\hline
-	Ersteller&\multicolumn{4}{l|}{\hyperref[person:MarkusBauer]{Markus Bauer}}\\
+	Ersteller&\multicolumn{4}{p{\ylength}|}{\hyperref[person:MarkusBauer]{Markus Bauer}}\\
 	\hline
 \end{tabularx}
-\vfill
-\subsection*{Bluhh}
-\label{tab:UCB}
+
+\subsection*{Termin Suchen}
+\label{tab:UCB_TerminSuchen}
 \begin{tabularx}{\textwidth}{|>{\colorcelllight{}}l|X|X|X|X|}
 	\hline
 	\multicolumn{5}{|l|}{\colorcell{UseCase Beschreibung}}\\
 	\hline
-	Name&\multicolumn{4}{l|}{Marius Kann Latex richtig!!}\\
+	Name&\multicolumn{4}{p{\ylength}|}{Termin suchen}\\
 	\hline
-	Kurzbeschreibung&\multicolumn{4}{l|}{}\\
+	Kurzbeschreibung&\multicolumn{4}{p{\ylength}|}{Benutzer/Spielleiter die Terminfindung zu ermöglichen}\\
 	\hline
-	Akteure&\multicolumn{4}{l|}{}\\
+	Akteure&\multicolumn{4}{p{\ylength}|}{Benutzer/Spielleiter}\\
 	\hline
-	Auslöser&\multicolumn{4}{l|}{}\\
+	Auslöser&\multicolumn{4}{p{\ylength}|}{Gruppe von Spieler hat sich gefunden und sucht noch einen passenden Termin.}\\
 	\hline
-	Eingehende Daten&\multicolumn{4}{l|}{}\\
+	Eingehende Daten&\multicolumn{4}{p{\ylength}|}{Terminvorschläge (Datum,Uhrzeit,Länge) der verschiedenen Benutzer}\\
 	\hline
-	Vorbedingungen&\multicolumn{4}{l|}{}\\
+	Vorbedingungen&\multicolumn{4}{p{\ylength}|}{keine}\\
 	\hline
-	Nachbedingungen&\multicolumn{4}{l|}{}\\
+	Nachbedingungen&\multicolumn{4}{p{\ylength}|}{Spieler haben einen für alle passenden Termin gefunden}\\
 	\hline
-	Essentielle Schritte&\multicolumn{4}{l|}{}\\
+	Essentielle Schritte&\multicolumn{4}{p{\ylength}|}{1. Benutzer Authentifizieren
+	\newline
+	2. Benutzer gibt für Ihn passende Termine ein
+	\newline
+	3. System zeigt passende Termine an
+	\newline
+	4. Benutzer einigen sich auf einen Termin}\\
 	\hline
-	Alternativszenarien&\multicolumn{4}{l|}{}\\
+	Alternativszenarien&\multicolumn{4}{p{\ylength}|}{Authentifizierung fehlgeschalgen:
+	\newline
+	1. Fehlermeldung anzeigen
+	\newline
+	Keinen übereinstimmenden Termin gefunden:
+	\newline
+	1. Meldung an die Spieler}\\
 	\hline
-	Offene Punkte&\multicolumn{4}{l|}{}\\
+	Offene Punkte&\multicolumn{4}{p{\ylength}|}{}\\
 	\hline
 	Änderungshistorie&Wann&Wer&Neuer Status&Was\\
-	&Bald&Nicht Ich&Fertig&DeineMutter!\\
+	&9.5.18&Markus Bauer&Fertig&Erstellung\\
 	\hline
-	Sonstiges&\multicolumn{4}{l|}{}\\
+	Sonstiges&\multicolumn{4}{p{\ylength}|}{}\\
 	\hline
-	Ersteller&\multicolumn{4}{l|}{\hyperref[person:MarkusBauer]{Markus Bauer}}\\
+	Ersteller&\multicolumn{4}{p{\ylength}|}{\hyperref[person:MarkusBauer]{Markus Bauer}}\\
 	\hline
 \end{tabularx}
