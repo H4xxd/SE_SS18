@@ -31,15 +31,12 @@
 \definecolor{titlepagecolor}{cmyk}{1,.60,0,.70}
 \definecolor{namecolor}{cmyk}{0,.24,.07,.47} 
 
-%\makeatletter
-%\renewcommand{\@dotsep}{10000} 
-%\makeatother
-
 \makeatletter                       
 \def\printauthor{%                  
 	{\small \@author}}   
 	\renewcommand{\@dotsep}{10000}            
 \makeatother
+
 \author{%
 	Patrick Gruber
 	\texttt{\mailto{patrick.gruber@st.oth-regensburg.de}}\vspace{10pt} \\
@@ -140,6 +137,7 @@
 	Unsere Applikation löst das beschriebene Problem durch das Zusammenbringen von begeisterten Pen\&Paper Spielern in einer intuitiven, modernen Umgebung. Pen\&Paper Freunde können sich zu Spielgruppen zusammenschließen und mithilfe unserer Anwendung auf schnelle Art und Weise neue und erfahrenere Spielpartner finden.\\
 	Um das Zusammenleben der Spieler untereinander möglichst reibungslos zu gestalten ist ein Bewertungssystem für Spiele, Spieler, Spielleiter und Orte geplant. So kann der Benutzer durch einen kurzen Blick erahnen, ob für ihn eine Spielgruppe mit diesem Mensch in Frage kommt.\\
 	Neben unseren Plänen für das Zusammenbringen von Spielern haben wir weiterhin vor eine Tauschbörse für Spiele anzubieten. Dadurch können Benutzer untereinander aufregende neue Spiele austauschen und kennen lernen.
+	
 \section{Requirementsengineering}
 \begin{tabularx}{\textwidth}{|c|X|}
 	\hline
@@ -246,17 +244,19 @@
 \input{docs/2_UseCaseBeschreibungen/UCB_Marius.tex}
 \input{docs/2_UseCaseBeschreibungen/UCB_Richard.tex}
 
-\newpage
+\pagebreak
 \section{Aktivtitätsdiagramme}
 \input{docs/3_Aktivitaetsdiagramme/Patrick/ActivityDia_Patrick.tex}
 \input{docs/3_Aktivitaetsdiagramme/Markus/ActivityDia_Markus.tex}
 \input{docs/3_Aktivitaetsdiagramme/Marius/ActivityDia_Marius.tex}
 \input{docs/3_Aktivitaetsdiagramme/Richard/ActivityDia_Richard.tex}
+\vfill
+Eine detailierte Übersicht über die jeweiligen Erstelle der einzelnen Diagramme ist im \hyperref[app:B_DiagrammUebersicht]{Teil B} des Appendix einzusehen.
 
 
 %=========APPENDIX==========
-\newpage
 
+\pagebreak
 \renewcommand{\appendixtocname}{Appendix}
 \renewcommand{\appendixpagename}{Appendix}
 \begin{appendices}
@@ -294,8 +294,43 @@
 		\hline
 	\end{tabularx}
 
+	\section{Übersicht Diagrammersteller}
+	\label{app:B_DiagrammUebersicht}
+	\begin{tabularx}{\linewidth}{|X|X|X|}
+		\hline
+		\colorcell{Ersteller} & \colorcell{Diagramm-Art} & \colorcell{Diagramm-Name}\\
+		\hline
+		Patrick Gruber&Aktivitätsdiagramm&\hyperref[fig:ActDia_Profil_Individualisieren]{Profil Individualisieren}\\
+		\hline
+		Patrick Gruber&Aktivitätsdiagramm&\hyperref[fig:ActDia_Foreneinntrag_Schreiben]{Foreneintrag Schreiben}\\
+		\hline
+		Patrick Gruber&Aktivitätsdiagramm&\hyperref[fig:ActDia_Forum_Verwalten]{Forum Verwalten}\\
+		\hline
+		\hline
+		Markus Bauer&Aktivitätsdiagramm& \\
+		\hline
+		Markus Bauer&Aktivitätsdiagramm& \\
+		\hline
+		Markus Bauer&Aktivitätsdiagramm& \\
+		\hline
+		\hline
+		Marius Tuschl&Aktivitätsdiagramm& \\
+		\hline
+		Marius Tuschl&Aktivitätsdiagramm& \\
+		\hline
+		Marius Tuschl&Aktivitätsdiagramm& \\
+		\hline
+		\hline
+		Richard Tscharntke&Aktivitätsdiagramm& \\
+		\hline
+		Richard Tscharntke&Aktivitätsdiagramm& \\
+		\hline
+		Richard Tscharntke&Aktivitätsdiagramm& \\
+		\hline
+	\end{tabularx}
+
 	\section{Individuelle Klassendiagramme}
-	\label{app:B_Klassendiagramme}
+	\label{app:C_Klassendiagramme}
 	
 	
 	\addtocontents{toc}{\endgroup}
