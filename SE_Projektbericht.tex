@@ -31,9 +31,14 @@
 \definecolor{titlepagecolor}{cmyk}{1,.60,0,.70}
 \definecolor{namecolor}{cmyk}{0,.24,.07,.47} 
 
+%\makeatletter
+%\renewcommand{\@dotsep}{10000} 
+%\makeatother
+
 \makeatletter                       
 \def\printauthor{%                  
-	{\small \@author}}              
+	{\small \@author}}   
+	\renewcommand{\@dotsep}{10000}            
 \makeatother
 \author{%
 	Patrick Gruber
@@ -251,8 +256,11 @@
 
 %=========APPENDIX==========
 \newpage
+
+\renewcommand{\appendixtocname}{Appendix}
+\renewcommand{\appendixpagename}{Appendix}
 \begin{appendices}
-	\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+	\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 	\makeatletter
 	\addtocontents{toc}{%
 		\begingroup
@@ -285,6 +293,10 @@
 		\colorcelllight{Appstore}&\label{person:MrGoogle}Mr.Google&8371&\mailto{info@google.de}\\
 		\hline
 	\end{tabularx}
+
+	\section{Individuelle Klassendiagramme}
+	\label{app:B_Klassendiagramme}
+	
 	
 	\addtocontents{toc}{\endgroup}
 \end{appendices}
