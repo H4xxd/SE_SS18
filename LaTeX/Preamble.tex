@@ -1,0 +1,51 @@
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{eurosym}
+\usepackage{geometry}
+\usepackage{xcolor,colortbl}
+\usepackage{graphicx}
+\usepackage[headsepline,footsepline,automark]{scrpage2}
+\usepackage{pdfpages}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{lscape}
+\usepackage[toc,page]{appendix} 
+\usepackage{caption}
+\usepackage{hyperref}
+
+\newlength{\mylength}
+\setlength{\mylength}{\textwidth}
+\addtolength{\mylength}{-\parindent}
+
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.70}
+\definecolor{namecolor}{cmyk}{0,.24,.07,.47} 
+
+\newcommand{\colorcell}[1]{\cellcolor{namecolor}\color{white}\textbf{#1}}
+\newcommand{\colorcelllight}[1]{\cellcolor{namecolor!25}\color{black}{#1}}
+\newcommand{\mailto}[1]{\href{mailto:#1}{#1}}
+
+\makeatletter                       
+\def\printauthor{%                  
+	{\small \@author}}   
+\renewcommand{\@dotsep}{10000}            
+\makeatother
+
+\author{%
+	Patrick Gruber
+	\texttt{\mailto{patrick.gruber@st.oth-regensburg.de}}\vspace{10pt} \\
+	Markus Bauer 
+	\texttt{\mailto{ markus.bauer@st.oth-regensburg.de}}\vspace{10pt} \\
+	Marius Tuschl
+	\texttt{\mailto{ marius.tuschl@st.oth-regensburg.de}}\vspace{10pt} \\
+	Richard Tscharntke
+	\texttt{\mailto{richard.tscharntke@st.oth-regensburg.de}}
+}
+
+\pagestyle{scrheadings}
+\cfoot[]{}
+\ofoot[]{\pagemark}
+\setkomafont{pageheadfoot}{\normalfont\sffamily}
+
